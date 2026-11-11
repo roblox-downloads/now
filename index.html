@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Roblox Mod - App Download
+    </title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <!-- FontAwesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts: Inter for clean English typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#eb5266',
+                            DEFAULT: '#d83556',
+                            dark: '#bd2443',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+      body {
+            background-color: #fdfdfd;
+            position: relative;
+            z-index: 0;
+            overflow-x: hidden;
+        }
+        
+        /* Subtle node/particle background effect */
+        .bg-pattern {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: radial-gradient(#fca5a5 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.4;
+            z-index: -1;
+        }
+        
+        .text-gradient {
+            background: linear-gradient(90deg, #d83556, #eb5266);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .bg-gradient-btn {
+            background: linear-gradient(90deg, #d83556, #eb5266);
+        }
+        
+        .btn-shadow {
+            box-shadow: 0 10px 20px -5px rgba(216, 53, 86, 0.4);
+        }
+
+        /* Custom Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-on-load {
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+        }
+        
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-400 { animation-delay: 400ms; }
+        .delay-500 { animation-delay: 500ms; }
+        .delay-600 { animation-delay: 600ms; }
+
+        /* Video Modal Styles */
+        #videoModal {
+            transition: opacity 0.4s ease, visibility 0.4s ease;
+        }
+        
+        #videoModal .modal-content {
+            transform: scale(0.95);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        #videoModal.modal-active {
+            opacity: 1 !important;
+            visibility: visible !important;
+            pointer-events: auto !important;
+        }
+
+        #videoModal.modal-active .modal-content {
+            transform: scale(1);
+        }
+    </style>
+  </head>
+  <body class="antialiased text-slate-800 flex flex-col min-h-screen">
+    <div class="bg-pattern">
+    </div>
+    <!-- Header / Navbar -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-40 border-b border-gray-100 animate-on-load">
+      <div class="max-w-5xl mx-auto px-4 py-3 flex justify-between items-center">
+        <!-- Logo area with white background and shadow -->
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-white rounded-[14px] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.1)] border border-gray-100 p-0 overflow-hidden">
+            <img src="https://plain-apac-prod-public.komododecks.com/202610/29/nQLSAnqbrO2DyfWsDhQ2/image.jpg" alt="Roblox Logo" class="w-full h-full object-cover rounded-[14px]" />
+          </div>
+          <h1 class="text-xl font-bold tracking-wide text-brand">
+            ROBLOX
+          </h1>
+        </div>
+        <!-- Navbar Download Btn -->
+        <a class="hidden sm:flex items-center gap-2 bg-gradient-btn text-white px-5 py-2 rounded-full font-semibold text-sm hover:opacity-90 transition-opacity" href="https://www.mediafire.com/file/y2m01kzunkuxttr/Roblox_Mod_%2528Unlimited%2529.apk/file">        <i class="fab fa-android"></i>
+        Download APK
+</a>
+        <a class="sm:hidden text-brand text-2xl" href="https://www.mediafire.com/file/y2m01kzunkuxttr/Roblox_Mod_%2528Unlimited%2529.apk/file">        <i class="fab fa-android"></i>
+</a>
+      </div>
+    </header>
+    <!-- Main Hero Section -->
+    <main class="flex-grow flex flex-col items-center justify-center px-4 py-12 md:py-20 text-center" id="download">
+      <!-- Badge -->
+      <div class="animate-on-load delay-100 inline-flex items-center gap-2 px-5 py-1.5 rounded-full border-2 border-brand/20 bg-brand/5 mb-8">
+        <span class="w-2.5 h-2.5 rounded-full bg-brand animate-pulse"></span>
+        <span class="text-brand font-bold text-xs md:text-sm tracking-widest uppercase">        Roblox Mod
+</span>
+      </div>
+      <!-- Headline -->
+      <h2 class="animate-on-load delay-200 text-4xl md:text-6xl font-extrabold leading-tight mb-4 text-slate-900">
+        Discover Endless Worlds,
+        <br />
+        <span class="text-gradient">        Play &amp; Create Together!
+</span>
+      </h2>
+      <!-- Subtitle -->
+      <p class="animate-on-load delay-300 text-slate-500 max-w-2xl mx-auto text-base md:text-lg mb-10 leading-relaxed font-medium">
+        Jump into millions of immersive 3D experiences with friends. Explore, play, and build whatever you can imagine right from your mobile device.
+      </p>
+      <!-- Action Buttons -->
+      <div class="animate-on-load delay-400 w-full max-w-xs mx-auto flex flex-col gap-4">
+        <!-- Download Button -->
+        <a class="w-full bg-gradient-btn text-white py-3.5 rounded-xl font-bold text-lg flex items-center justify-center gap-3 btn-shadow hover:-translate-y-1 transition-transform duration-300" href="https://www.mediafire.com/file/y2m01kzunkuxttr/Roblox_Mod_%2528Unlimited%2529.apk/file">        <i class="fab fa-android text-xl"></i>
+        Download APK
+</a>
+        <!-- How to use Button (Triggers Modal) -->
+        <button onclick="openVideoModal()" class="w-full bg-white text-slate-700 py-3.5 rounded-xl font-bold text-lg flex items-center justify-center gap-3 shadow-md border border-gray-100 hover:bg-gray-50 transition-colors">
+          <i class="fas fa-play-circle text-brand text-xl"></i>
+          How to Use?
+        </button>
+      </div>
+      <!-- App Details / Info Cards -->
+      <div class="animate-on-load delay-500 mt-12 w-full max-w-3xl grid grid-cols-3 gap-4 text-center">
+        <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 hover:-translate-y-1 transition-transform duration-300">
+          <i class="fas fa-code-branch text-brand mb-2 text-xl"></i>
+          <h4 class="text-sm font-bold text-slate-700">
+            Version
+          </h4>
+          <p class="text-xs text-gray-500">
+            v2.4.0 (Latest)
+          </p>
+        </div>
+        <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 hover:-translate-y-1 transition-transform duration-300">
+          <i class="fas fa-weight-hanging text-brand mb-2 text-xl"></i>
+          <h4 class="text-sm font-bold text-slate-700">
+            Size
+          </h4>
+          <p class="text-xs text-gray-500">
+            109.31 MB
+          </p>
+        </div>
+        <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 hover:-translate-y-1 transition-transform duration-300">
+          <i class="fab fa-android text-brand mb-2 text-xl"></i>
+          <h4 class="text-sm font-bold text-slate-700">
+            Android
+          </h4>
+          <p class="text-xs text-gray-500">
+            8.0 &amp; Up
+          </p>
+        </div>
+      </div>
+      <!-- Downloads & High-Quality Highlights -->
+      <div class="animate-on-load delay-600 mt-6 w-full max-w-3xl grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <!-- Downloads Counter Card -->
+        <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 flex items-center gap-4 text-left">
+          <div class="w-12 h-12 rounded-xl bg-brand/10 flex items-center justify-center text-brand text-2xl flex-shrink-0">
+            <i class="fas fa-download"></i>
+          </div>
+          <div>
+            <h4 class="text-sm font-bold text-slate-400 uppercase tracking-wider">
+              Total Downloads
+            </h4>
+            <p class="text-2xl font-extrabold text-slate-800">
+              50K+
+              <span class="text-xs font-semibold text-emerald-500 bg-emerald-50 px-2 py-0.5 rounded-full inline-block align-middle ml-1">              Active
+</span>
+            </p>
+          </div>
+        </div>
+        <!-- High Quality Features Highlight Card -->
+        <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 flex items-center gap-4 text-left">
+          <div class="w-12 h-12 rounded-xl bg-brand/10 flex items-center justify-center text-brand text-2xl flex-shrink-0">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <div>
+            <h4 class="text-sm font-bold text-slate-400 uppercase tracking-wider">
+              Quality &amp; Security
+            </h4>
+            <p class="text-sm font-bold text-slate-700 mt-0.5">
+              100% Safe &amp; Ad-Free Mod Build
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer class="animate-on-load delay-600 py-6 text-center border-t border-gray-100 bg-white/50">
+      <p class="text-xs text-gray-400">
+        © 2026 Roblox Mod. All rights reserved.
+      </p>
+    </footer>
+    <!-- Video Modal -->
+    <div id="videoModal" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center opacity-0 invisible pointer-events-none backdrop-blur-sm p-4">
+      <div class="modal-content relative w-full max-w-4xl bg-black rounded-2xl overflow-hidden shadow-2xl border border-gray-800">
+        <!-- Close button -->
+        <button onclick="closeVideoModal()" class="absolute top-4 right-4 z-10 w-10 h-10 bg-black/60 hover:bg-brand text-white rounded-full flex items-center justify-center transition-colors backdrop-blur-md">
+          <i class="fas fa-times text-xl"></i>
+        </button>
+        <!-- 16:9 Aspect Ratio Container for YouTube iframe -->
+        <div class="relative w-full pb-[56.25%]">
+          <iframe id="youtubePlayer" class="absolute top-0 left-0 w-full h-full" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+          </iframe>
+        </div>
+      </div>
+    </div>
+    <!-- JavaScript for Modal -->
+    <script>
+      const modal = document.getElementById('videoModal');
+        const player = document.getElementById('youtubePlayer');
+        
+        const videoUrl = "https://www.youtube.com/embed/9jo51nJrO0k?si=gBwQfSmB_rFgVfRe&autoplay=1";
+
+        function openVideoModal() {
+            player.src = videoUrl; 
+            modal.classList.add('modal-active');
+            document.body.style.overflow = 'hidden'; 
+        }
+
+        function closeVideoModal() {
+            modal.classList.remove('modal-active');
+            document.body.style.overflow = ''; 
+            setTimeout(() => {
+                player.src = "";
+            }, 400); 
+        }
+
+        modal.addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeVideoModal();
+            }
+        });
+    </script>
+  </body>
+</html>
